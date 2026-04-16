@@ -1,0 +1,10 @@
+{
+  "todos": [
+    { "id": 1, "title": "React o'rganish",   "completed": false },
+    { "id": 2, "title": "Tailwind o'rganish", "completed": true  },
+    { "id": 3, "title": "Vite o'rganish", "completed": true  },
+    {"id": 4,  "title": "API o'rganish", "completed": true}
+  ]
+}
+
+
