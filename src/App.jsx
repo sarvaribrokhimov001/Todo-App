@@ -1,21 +1,16 @@
 import React from 'react';
-import '../src/index.css';
-import "../src/App.css"
-import TodoForm from './components/TodoForm';
-import TodoList from './components/TodoList';
-import TodoItem from './components/TodoItem';
-import FilterBar from './components/FilterBar';
+import "../src/App.css";
+import { Route, Routes } from 'react-router-dom';
+import Dashboard from './components/Dashboard';
+import Tasks from './components/Tasks';
 
 const App = () => {
   return (
-    <div>
-      <TodoForm/>
-      <TodoList/>
-      <TodoItem/>
-      <FilterBar/>
-      <ViewModal/>
-    </div>
+    <Routes>
+      <Route path='/' element={<Dashboard />} >
+        <Route path='/tasks' element={<Tasks />} />
+      </Route>
+    </Routes>
   )
 }
-
 export default App
