@@ -2,33 +2,33 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 const EditModal = ({setEditModal , editId}) => {
-    const [formData , setFormData] = useState({
-      id: editId,
-      title: "",
-      status: "",
-      image: "",
-      description: ""
-    });
+  const [formData , setFormData] = useState({
+    id: editId,
+    title: "",
+    status: "",
+    image: "",
+    description: ""
+  });
 
     useEffect(() => {
-       axios.get(`http://localhost:3001/tasks/${editId}`).then((data) => {
-        const response = data?.data;
+      axios.get(`http://localhost:3001/tasks/${editId}`).then((data) => {
+      const response = data?.data;
 
         setFormData({
-            title: response?.title, 
-            image: response?.image,
-            status: response?.status,
-            description: response?.description
+          title: response?.title, 
+          image: response?.image,
+          status: response?.status,
+          description: response?.description
         })
         console.log(response);
        });
     } , [editId]);
 
     const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name] : e.target.value,
-        });
+      setFormData({
+        ...formData,
+        [e.target.name] : e.target.value,
+      });
     }
 
     const handleSubmit = (e) => {

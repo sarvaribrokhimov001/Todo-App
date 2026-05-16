@@ -4,9 +4,9 @@
 @tailwind utilities;
 
 table {
-    width: 100%;
-    height: 100vh;
-    border-collapse: collapse;
+  width: 100%;
+  height: 100vh;
+  border-collapse: collapse;
 }
 
 th {
@@ -41,5 +41,5 @@ td:nth-child(5) {
 }
 
 td:nth-child(6) {
-    width: 270px;
+  width: 270px;
 }

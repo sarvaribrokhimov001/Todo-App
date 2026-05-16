@@ -50,7 +50,6 @@ const Table = ({tasks}) => {
       </button>
     </div>
 
-
     <table>
       <thead>
         <tr>
